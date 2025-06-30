@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fun Run Registration Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-green-50 via-white to-blue-50 min-h-screen py-10 text-gray-800 font-sans">
+
+  <div class="max-w-2xl mx-auto bg-white p-8 border rounded-lg shadow-md">
+    <div class="text-center mb-6">
+      <img src="runner-banner.png" alt="Fun Run Banner" class="mx-auto h-30">
+      <h1 class="text-3xl font-bold mt-4">AISAT Multicultu-Run Registration Form</h1>
+    </div>
+
+    <form>
+      <!-- Your Information -->
+      <h2 class="text-xl font-semibold mb-2">Your Information</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="text" placeholder="First Name" class="border p-2 rounded" required>
+        <input type="text" placeholder="Last Name" class="border p-2 rounded" required>
+        <input type="number" placeholder="Age" class="border p-2 rounded" required>
+      </div>
+
+      <!-- Run or Walk -->
+      <div class="mt-4">
+        <label class="block font-medium mb-2">Run or Walk</label>
+        <label class="inline-flex items-center mr-6">
+          <input type="radio" name="activity" class="form-radio" required>
+          <span class="ml-2">Runner</span>
+        </label>
+        <label class="inline-flex items-center">
+          <input type="radio" name="activity" class="form-radio" required>
+          <span class="ml-2">Walker</span>
+        </label>
+      </div>
+
+      <!-- Run Distance -->
+      <div class="mt-4">
+        <label class="block font-medium mb-2">Choose Distance</label>
+        <select class="border p-2 rounded w-full" required>
+          <option value="">Select Distance</option>
+          <option value="3K">3K</option>
+          <option value="4K">5K</option>
+          <option value="5K">10K</option>
+          <option value="10K">21K</option>
+        </select>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+        <input type="email" placeholder="example@example.com" class="border p-2 rounded" required>
+        <input type="tel" placeholder="(0912) 345 6789" class="border p-2 rounded" required>
+      </div>
+
+      <!-- Shirt Size -->
+      <div class="mt-4">
+        <label class="block font-medium mb-2">Shirt Size</label>
+        <select class="border p-2 rounded w-full" required>
+          <option>Please Select</option>
+          <option>XS</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+        </select>
+      </div>
+
+      <!-- Billing Address -->
+      <div class="mt-4">
+        <label class="block font-medium mb-2">Runner Address</label>
+        <input type="text" placeholder="Street Address" class="border p-2 rounded w-full mb-2">
+        <input type="text" placeholder="Street Address Line 2" class="border p-2 rounded w-full mb-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-2">
+          <input type="text" placeholder="City" class="border p-2 rounded">
+          <input type="text" placeholder="State / Province" class="border p-2 rounded">
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input type="text" placeholder="Postal / Zip Code" class="border p-2 rounded">
+          <select class="border p-2 rounded">
+            <option>Philippines</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Terms and Conditions -->
+      <div class="mt-6">
+        <label class="inline-flex items-start">
+          <input type="checkbox" class="mt-1 mr-2" required>
+          <span>I agree to the <button type="button" onclick="toggleModal(true)" class="text-blue-600 underline">Terms and Conditions</button>.</span>
+        </label>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="mt-6 text-right">
+        <button type="submit" class="bg-black text-white px-6 py-2 rounded shadow hover:bg-gray-800">Next</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Terms Modal -->
+  <div id="termsModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-lg p-6 max-w-xl">
+      <h2 class="text-2xl font-bold mb-4">Fun Run Terms and Conditions</h2>
+      <div class="overflow-y-auto max-h-80 text-sm space-y-3">
+        <p><strong>1.</strong> All participants must register before the event date.</p>
+        <p><strong>2.</strong> Participants under 18 must be accompanied by a guardian or have a signed waiver.</p>
+        <p><strong>3.</strong> You confirm you are physically fit to participate.</p>
+        <p><strong>4.</strong> The organizers are not liable for injury, loss, or damage during the event.</p>
+        <p><strong>5.</strong> The event may be postponed or canceled due to weather or unforeseen events.</p>
+        <p><strong>6.</strong> Fees are non-refundable and non-transferable.</p>
+        <p><strong>7.</strong> You grant permission to use photos/videos taken during the run.</p>
+        <p><strong>8.</strong> Event bib and shirt must be worn on the day.</p>
+      </div>
+      <div class="mt-4 text-right">
+        <button onclick="toggleModal(false)" class="px-4 py-2 bg-blue-600 text-white rounded">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Script -->
+  <script>
+    function toggleModal(show) {
+      document.getElementById('termsModal').classList.toggle('hidden', !show);
+    }
+  </script>
+
+</body>
+</html>
