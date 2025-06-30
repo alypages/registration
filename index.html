@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fun Run Registration Form</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body style="background-color: #fcd762" class="min-h-screen py-10 text-gray-800 font-sans">
+<body style="background-color: #fcd762" class="min-h-screen py-6 px-4 text-gray-800 font-sans">
 
-  <div class="max-w-2xl mx-auto bg-white p-8 border rounded-lg shadow-md">
-    <div class="text-center mb-6">
-      <img src="runner-banner.png" alt="Fun Run Banner" class="mx-auto h-30">
-      <h1 class="text-3xl font-bold mt-4">AISAT Multicultu-Run Registration Form</h1>
+  <div class="max-w-2xl w-full mx-auto bg-white p-4 sm:p-6 md:p-8 border rounded-lg shadow-md">
+    <div class="text-center mb-4">
+      <img src="runner-banner.png" alt="Fun Run Banner" class="mx-auto w-full max-h-40 object-contain">
+      <h1 class="text-2xl sm:text-3xl font-bold mt-2">AISAT Multicultu-Run Registration Form</h1>
     </div>
 
     <form>
-      <!-- Your Information -->
       <h2 class="text-xl font-semibold mb-2">Your Information</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <input type="text" placeholder="First Name" class="border p-2 rounded" required>
-        <input type="text" placeholder="Last Name" class="border p-2 rounded" required>
-        <input type="number" placeholder="Age" class="border p-2 rounded" required>
+        <input type="text" placeholder="First Name" class="border p-2 rounded w-full" required>
+        <input type="text" placeholder="Last Name" class="border p-2 rounded w-full" required>
+        <input type="number" placeholder="Age" class="border p-2 rounded w-full" required>
       </div>
 
-      <!-- Run or Walk -->
       <div class="mt-4">
         <label class="block font-medium mb-2">Run or Walk</label>
         <label class="inline-flex items-center mr-6">
@@ -35,7 +34,6 @@
         </label>
       </div>
 
-      <!-- Run Distance -->
       <div class="mt-4">
         <label class="block font-medium mb-2">Choose Distance</label>
         <select class="border p-2 rounded w-full" required>
@@ -47,13 +45,11 @@
         </select>
       </div>
 
-      <!-- Contact Info -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-        <input type="email" placeholder="example@example.com" class="border p-2 rounded" required>
-        <input type="tel" placeholder="(0912) 345 6789" class="border p-2 rounded" required>
+        <input type="email" placeholder="example@example.com" class="border p-2 rounded w-full" required>
+        <input type="tel" placeholder="(0912) 345 6789" class="border p-2 rounded w-full" required>
       </div>
 
-      <!-- Shirt Size -->
       <div class="mt-4">
         <label class="block font-medium mb-2">Shirt Size</label>
         <select class="border p-2 rounded w-full" required>
@@ -66,25 +62,23 @@
         </select>
       </div>
 
-      <!-- Billing Address -->
       <div class="mt-4">
         <label class="block font-medium mb-2">Runner Address</label>
         <input type="text" placeholder="Street Address" class="border p-2 rounded w-full mb-2">
         <input type="text" placeholder="Street Address Line 2" class="border p-2 rounded w-full mb-2">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-2">
-          <input type="text" placeholder="City" class="border p-2 rounded">
-          <input type="text" placeholder="State / Province" class="border p-2 rounded">
+          <input type="text" placeholder="City" class="border p-2 rounded w-full">
+          <input type="text" placeholder="State / Province" class="border p-2 rounded w-full">
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input type="text" placeholder="Postal / Zip Code" class="border p-2 rounded">
-          <select class="border p-2 rounded">
+          <input type="text" placeholder="Postal / Zip Code" class="border p-2 rounded w-full">
+          <select class="border p-2 rounded w-full">
             <option>Philippines</option>
             <option>Other</option>
           </select>
         </div>
       </div>
 
-      <!-- Terms and Conditions -->
       <div class="mt-6">
         <label class="inline-flex items-start">
           <input type="checkbox" class="mt-1 mr-2" required>
@@ -92,7 +86,6 @@
         </label>
       </div>
 
-      <!-- Submit Button -->
       <div class="mt-6 text-right">
         <button type="submit" class="bg-black text-white px-6 py-2 rounded shadow hover:bg-gray-800">Next</button>
       </div>
@@ -101,7 +94,7 @@
 
   <!-- Terms Modal -->
   <div id="termsModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-    <div class="bg-white rounded-lg p-6 max-w-xl">
+    <div class="bg-white rounded-lg p-6 max-w-xl w-full mx-4">
       <h2 class="text-2xl font-bold mb-4">Fun Run Terms and Conditions</h2>
       <div class="overflow-y-auto max-h-80 text-sm space-y-3">
         <p><strong>1.</strong> All participants must register before the event date.</p>
